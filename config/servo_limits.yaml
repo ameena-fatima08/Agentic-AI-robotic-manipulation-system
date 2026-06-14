@@ -1,0 +1,23 @@
+servo1:
+  min: 10
+  max: 170
+
+servo2:
+  min: 20
+  max: 160
+
+servo3:
+  min: 20
+  max: 160
+
+servo4:
+  min: 10
+  max: 170
+
+servo5:
+  min: 0
+  max: 180
+
+servo6:
+  min: 30
+  max: 120

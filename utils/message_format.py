@@ -7,18 +7,6 @@ def create_message(
     data: Dict[str, Any],
     status: str = "success"
 ) -> Dict:
-    """
-    Create standardized message
-    
-    Args:
-        agent_name: Name of sending agent
-        message_type: Type of message (intent, detection, action, etc.)
-        data: Message payload
-        status: success/error/warning
-    
-    Returns:
-        Standardized message dict
-    """
     return {
         "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
         "agent": agent_name,
@@ -27,5 +15,12 @@ def create_message(
         "status": status
     }
 
-# Example usage:
-# msg = create_message("speech_agent", "intent", {"action": "pick", "object": "bottle"})
+def print_message(message: Dict):
+    """Print a formatted agent message"""
+    print(
+        f"[{message['timestamp']}] "
+        f"{message['agent']} | "
+        f"{message['type']} | "
+        f"{message['status']}"
+    )
+    print(f"Data: {message['data']}")
